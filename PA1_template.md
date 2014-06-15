@@ -67,7 +67,7 @@ print(xt, type = "html")
 ```
 
 <!-- html table generated in R 3.0.3 by xtable 1.7-3 package -->
-<!-- Sat Jun 14 21:56:36 2014 -->
+<!-- Sun Jun 15 08:57:01 2014 -->
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> steps.taken.per.day.na.removed </TH>  </TR>
   <TR> <TD align="right"> mean </TD> <TD align="right"> 10766.19 </TD> </TR>
@@ -182,7 +182,7 @@ print(xtNAsFilled, type = "html")
 ```
 
 <!-- html table generated in R 3.0.3 by xtable 1.7-3 package -->
-<!-- Sat Jun 14 21:56:37 2014 -->
+<!-- Sun Jun 15 08:57:02 2014 -->
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> steps.taken.per.day.na.filled </TH>  </TR>
   <TR> <TD align="right"> mean </TD> <TD align="right"> 10766.19 </TD> </TR>
@@ -200,7 +200,7 @@ print(xtCombined, type = "html")
 ```
 
 <!-- html table generated in R 3.0.3 by xtable 1.7-3 package -->
-<!-- Sat Jun 14 21:56:37 2014 -->
+<!-- Sun Jun 15 08:57:02 2014 -->
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> steps.taken.per.day.na.removed </TH> <TH> steps.taken.per.day.na.filled </TH>  </TR>
   <TR> <TD align="right"> mean </TD> <TD align="right"> 10766.19 </TD> <TD align="right"> 10766.19 </TD> </TR>
@@ -218,6 +218,11 @@ removed and that using NAs filled.
 ## Are there differences in activity patterns 
 ## between weekdays and weekends?
 
+- For data frame with NAs filled, add a column with date changed into weekdays
+- Replace Monday-Friday with weekday and Saturday-Sunday with weekend
+- Melt data (weekdays, interval and steps) based on weekdays and interval
+- Cast melted data based on weekdays and interval and calculate mean of steps
+- Plot averages of steps taken for intervals during weekday and weekend
 
 
 ```r

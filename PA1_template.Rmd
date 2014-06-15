@@ -177,6 +177,11 @@ removed and that using NAs filled.
 ## Are there differences in activity patterns 
 ## between weekdays and weekends?
 
+- For data frame with NAs filled, add a column with date changed into weekdays
+- Replace Monday-Friday with weekday and Saturday-Sunday with weekend
+- Melt data (weekdays, interval and steps) based on weekdays and interval
+- Cast melted data based on weekdays and interval and calculate mean of steps
+- Plot averages of steps taken for intervals during weekday and weekend
 
 ``` {r difference between weekdays and weekends, results='asis'}
 DFNAsFilled$weekdays <- weekdays(DFNAsFilled$date)
